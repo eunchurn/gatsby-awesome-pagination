@@ -1,5 +1,3 @@
-// @flow
-
 import isString from "lodash/fp/isString";
 import get from "lodash/fp/get";
 import times from "lodash/fp/times";
@@ -10,7 +8,7 @@ import {
   paginatedPath,
   getPreviousItem,
   getNextItem,
-  calculateSkip
+  calculateSkip,
 } from "./utils";
 
 import type { PathPrefix } from "./utils";
@@ -18,13 +16,13 @@ import type { PathPrefix } from "./utils";
 type CreatePage = ({}) => void;
 
 type PaginateOpts = {
-  createPage: CreatePage,
-  items: {}[],
-  itemsPerPage: number,
-  itemsPerFirstPage?: number,
-  pathPrefix: PathPrefix,
-  component: string,
-  context?: {}
+  createPage: CreatePage;
+  items: {}[];
+  itemsPerPage: number;
+  itemsPerFirstPage?: number;
+  pathPrefix: PathPrefix;
+  component: string;
+  context?: {};
 };
 export const paginate = (opts: PaginateOpts): void => {
   const {
@@ -34,7 +32,7 @@ export const paginate = (opts: PaginateOpts): void => {
     itemsPerFirstPage,
     pathPrefix,
     component,
-    context
+    context,
   } = opts;
 
   // How many items do we have in total? We use `items.length` here. In fact, we
@@ -45,7 +43,7 @@ export const paginate = (opts: PaginateOpts): void => {
   // otherwise use `itemsPerPage`.
   // $FlowExpectError
   const firstPageCount: number = isInteger(itemsPerFirstPage)
-    ? itemsPerFirstPage
+    ? itemsPerFirstPage || 0
     : itemsPerPage;
 
   // How many page should we have?
@@ -85,18 +83,18 @@ export const paginate = (opts: PaginateOpts): void => {
         limit: pageNumber === 0 ? firstPageCount : itemsPerPage,
         numberOfPages,
         previousPagePath,
-        nextPagePath
-      })
+        nextPagePath,
+      }),
     });
   })(numberOfPages);
 };
 
 type CreatePagePerItemOpts = {
-  createPage: CreatePage,
-  items: {}[],
-  itemToPath: string | (({}) => string),
-  itemToId: string | (({}) => string),
-  component: string
+  createPage: CreatePage;
+  items: {}[];
+  itemToPath: string | (({}) => string);
+  itemToId: string | (({}) => string);
+  component: string;
 };
 export const createPagePerItem = (opts: CreatePagePerItemOpts): void => {
   const { createPage, items, itemToPath, itemToId, component } = opts;
@@ -121,9 +119,9 @@ export const createPagePerItem = (opts: CreatePagePerItemOpts): void => {
     // value for the next and previous path and ID. Gatsby ignores context
     // values which are undefined, so we need these to exist.
     const previousItem = getPreviousItem(items, index);
-    const previousPath = getPath(previousItem) || "";
+    const previousPath = getPath(previousItem || {}) || "";
     const nextItem = getNextItem(items, index);
-    const nextPath = getPath(nextItem) || "";
+    const nextPath = getPath(nextItem || {}) || "";
 
     // Does the item have a `context` field?
     const itemContext = get("context")(item) || {};
@@ -131,17 +129,17 @@ export const createPagePerItem = (opts: CreatePagePerItemOpts): void => {
       pageId: id,
       previousPagePath: previousPath,
       previousItem: previousItem,
-      previousPageId: getId(previousItem) || "",
+      previousPageId: getId(previousItem || {}) || "",
       nextPagePath: nextPath,
       nextItem: nextItem,
-      nextPageId: getId(nextItem) || ""
+      nextPageId: getId(nextItem || {}) || "",
     });
 
     // Call `createPage()` for this item
     createPage({
       path,
       component,
-      context
+      context,
     });
   })(items.length);
 };

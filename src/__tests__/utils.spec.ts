@@ -3,7 +3,7 @@ import {
   getNextItem,
   paginatedPath,
   calculateSkip
-} from "../src/utils";
+} from "../utils";
 
 describe("utils", () => {
   describe("getPreviousItem()", () => {

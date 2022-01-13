@@ -987,175 +987,175 @@ exports[`createPagePerItem() Calls createPage() with the correct params 1`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],
@@ -1228,19 +1228,19 @@ exports[`paginate() allows fine-tuning pathPrefix with a function 1`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],
@@ -1317,19 +1317,19 @@ exports[`paginate() creates pages and forwards context 1`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],

@@ -1,13 +1,13 @@
 import _ from "lodash";
 import fp from "lodash/fp";
-import { paginate, createPagePerItem } from "../src";
+import { paginate, createPagePerItem } from "..";
 
 describe("paginate()", () => {
   it("creates pages and forwards context", () => {
     const createPage = jest.fn();
     paginate({
       createPage,
-      items: Array(12).fill(),
+      items: Array(12).fill(null),
       itemsPerPage: 3,
       itemsPerFirstPage: 5,
       pathPrefix: "/blog",
@@ -21,7 +21,7 @@ describe("paginate()", () => {
     const createPage = jest.fn();
     paginate({
       createPage,
-      items: Array(12).fill(),
+      items: Array(12).fill(null),
       itemsPerPage: 3,
       pathPrefix: ({ pageNumber }) =>
         pageNumber === 0 ? "/blog" : "/blog/page",

@@ -3,10 +3,10 @@ import { Link } from "gatsby";
 
 const linkOrText = (
   label: string,
-  link: string,
-  activeStyle: {},
-  inactiveStyle: {}
-): React.Node =>
+  link: string | undefined,
+  activeStyle?: {},
+  inactiveStyle?: {}
+): React.ReactNode =>
   link ? (
     <Link to={link} style={activeStyle}>
       {label}
@@ -16,19 +16,21 @@ const linkOrText = (
   );
 
 type PaginationLinksProps = {
-  previousLabel?: string,
-  nextLabel?: string,
-  pageLabel?: string,
-  separator?: string,
+  previousLabel?: string;
+  nextLabel?: string;
+  pageLabel?: string;
+  separator?: string;
+  activeStyle: {};
+  inactiveStyle: { textDecorationLine: string; color: string };
   pageContext: {
-    pageNumber: number,
-    humanPageNumber: number,
-    skip: number,
-    limit: number,
-    numberOfPages: number,
-    previousPagePath?: string,
-    nextPagePath?: string
-  }
+    pageNumber: number;
+    humanPageNumber: number;
+    skip: number;
+    limit: number;
+    numberOfPages: number;
+    previousPagePath?: string;
+    nextPagePath?: string;
+  };
 };
 
 export const PaginationLinks = ({
@@ -45,14 +47,14 @@ export const PaginationLinks = ({
     limit,
     numberOfPages,
     previousPagePath,
-    nextPagePath
-  }
-}: PaginationLinksProps): React.Node => {
+    nextPagePath,
+  },
+}: PaginationLinksProps): React.ReactNode => {
   return (
     <div className="has-text-centered">
       {linkOrText(previousLabel, previousPagePath, activeStyle, inactiveStyle)}
       {separator}
-      {pageLabel.replace("%d", humanPageNumber)}
+      {pageLabel.replace("%d", String(humanPageNumber))}
       {separator}
       {linkOrText(nextLabel, nextPagePath)}
     </div>

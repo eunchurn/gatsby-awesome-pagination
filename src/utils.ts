@@ -1,4 +1,3 @@
-// @flow
 import get from "lodash/fp/get";
 
 type ReturnedItem = {} | void;
@@ -26,9 +25,9 @@ export const getNextItem = (items: {}[], index: number): ReturnedItem => {
 };
 
 type PathPrefixFunction = ({
-  pageNumber: number,
-  numberOfPages: number
-}) => string;
+  pageNumber,
+  numberOfPages
+}: { pageNumber: number, numberOfPages: number }) => string;
 
 export type PathPrefix = string | PathPrefixFunction;
 
